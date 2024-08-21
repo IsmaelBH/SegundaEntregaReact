@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Stage Custom Hip",
+        "price": "2500",
+        "stock": 11,
+        "image": "/assets/img/Yamahacustomhip.jpg",
+        "description": "Bateria Profesional 4 cuerpos"
+    },
+    {
+        "id": "2",
+        "name": "22 K CONSTANTINOPLE THIN RIDE MARTILLADO",
+        "price": "1200",
+        "stock": 5,
+        "image": "/assets/img/Constantinople22.jpg",
+        "description": "Zildjian K 22 pulgadas martillado"
+    },
+    {
+        "id": "3",
+        "name": "Mapex Black Panther Design Lab Maximus",
+        "price": "800",
+        "stock": 10,
+        "image": "/assets/img/blackpantherdesign.jpg",
+        "description": "Tambor tope de gama Black Panther"
+    },
+    {
+        "id": "4",
+        "name": "Stage Custom Hip",
+        "price": "2500",
+        "stock": 12,
+        "image": "/assets/img/Yamahacustomhip.jpg",
+        "description": "Bateria Profesional 4 cuerpos"
+    },
+    {
+        "id": "5",
+        "name": "22 K CONSTANTINOPLE THIN RIDE MARTILLADO",
+        "price": "1200",
+        "stock": 9,
+        "image": "/assets/img/Constantinople22.jpg",
+        "description": "Zildjian K 22 pulgadas martillado"
+    },
+    {
+        "id": "6",
+        "name": "Mapex Black Panther Design Lab Maximus",
+        "price": "800",
+        "stock": 7,
+        "image": "/assets/img/blackpantherdesign.jpg",
+        "description": "Tambor tope de gama Black Panther"
+    }
+]
