@@ -2,26 +2,37 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer'
-import ItemCount from './components/ItemCount/ItemCount'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import Formulario from './components/Example/Formulario'
-import CounterComponent from './components/Example/CounterComponent'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Error from './components/Error/Error'
 
-function App() {
+const App = () => {
 
 
   return (
     <>
 
-      {/* <Navbar />
+      <BrowserRouter>
+        <Navbar />
 
-      <ItemListContainer greeting="Bienvenidos a IB Drums" />
 
-      <Footer /> */}
+        <Routes>
 
-      {/* <ItemDetailContainer />  */}
+          <Route path='/' element={<ItemListContainer />} />
 
-      <CounterComponent />
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
+
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+
+          <Route path='*' element={<Error />} />
+
+
+        </Routes>
+
+        <Footer />
+
+      </BrowserRouter >
+
     </>
   )
 }
