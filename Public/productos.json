@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Stage Custom Hip",
         "price": "2500",
-        "stock": 11,
+        "stock": 5,
         "image": "/assets/img/Yamahacustomhip.jpg",
         "category": "Drums",
         "description": "Bateria Profesional 4 cuerpos"
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "22 K CONSTANTINOPLE THIN RIDE MARTILLADO",
         "price": "1200",
-        "stock": 5,
+        "stock": 11,
         "image": "/assets/img/Constantinople22.jpg",
         "category": "Cymbal",
         "description": "Zildjian K 22 pulgadas martillado"

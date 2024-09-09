@@ -3,8 +3,9 @@ import "./ItemListContainer.css"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import Spinner from "../Spinner/Spinner"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
-const ItenListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting }) => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -13,25 +14,25 @@ const ItenListContainer = ({ greeting }) => {
 
     useEffect(() => {
 
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/productos.json')
-                const data = await response.json()
-                const filterProducts = categoryId ? data.filter((p) => p.category === categoryId) : data;
-                setProducts(filterProducts)
+        setLoading(true);
 
+        const db = getFirestore();
 
-            } catch (error) {
-                console.log(error)
-            } finally {
-                setLoading(false)
-            }
+        const myProducts = categoryId
+            ? query(collection(db, "Item"), where("category", "==", categoryId))
+            : collection(db, "Item");
 
-        }
-
-        fetchData()
-
-    }, [categoryId])
+        getDocs(myProducts)
+            .then((res) => {
+                const newProducts = res.docs.map((doc) => {
+                    const data = doc.data();
+                    return { id: doc.id, ...data };
+                });
+                setProducts(newProducts);
+            })
+            .catch((error) => console.log("Error searching items", error))
+            .finally(() => setLoading(false));
+    }, [categoryId]);
 
     return (
         <div className="container">
@@ -44,4 +45,4 @@ const ItenListContainer = ({ greeting }) => {
     )
 }
 
-export default ItenListContainer
+export default ItemListContainer

@@ -27,3 +27,8 @@
 li::marker {
     content: "";
 }
+
+.active {
+    color: rgb(255, 251, 0);
+    font-weight: bolder;
+}
